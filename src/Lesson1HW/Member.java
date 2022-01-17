@@ -6,7 +6,7 @@ public class Member {
     private int run;
     private int swin;
     private int cycle;
-    static boolean passStage;
+    static String passStage;
     static int countMember;
 
     public Member(String name, int age, int run, int swin, int cycle) {
@@ -15,13 +15,12 @@ public class Member {
         this.run = run;
         this.swin = swin;
         this.cycle = cycle;
-        passStage = false;
+        passStage = "";
         countMember++;
     }
 
-
     public String infoMember () {
-        return  this.name + " из команды " + passStage + " возраст " + this.age + " " +
+        return  this.name + " " + passStage + " возраст " + this.age + " " +
                 this.run + " " + this.swin  + " " + this.cycle;
     }
 

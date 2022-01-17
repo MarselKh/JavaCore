@@ -2,16 +2,27 @@ package Lesson1HW;
 
 public class Direction {
 
-/*    int courseDistance [];*/
 
     public static void main (String[] args) {
+        Member[] membersTeam = new Member[4];
+        membersTeam[0] = new Member("Ivan", 16, 2500, 500, 6000);
+        membersTeam[1] = new Member("Dima", 15, 2000, 100, 2000);
+        membersTeam[2] = new Member("Alena", 16, 3000, 50, 1000);
+        membersTeam[3] = new Member("Ola", 17, 3000, 200, 6000);
 
-        Team team = new Team("Dinamo", member1, member2, member3, member4);
-        Course course = new Course(2500, 200,3000);
-/*        course.doIt(team);*/
-/*        team.printInfoMembersTeam();*/
-
+        Course course = new Course(2000, 200,3000);
+        course.doIt(membersTeam);
+        printInfoMembersTeam(membersTeam);
     }
+
+    public static void printInfoMembersTeam(Member[] membersTeam) {
+        System.out.println("Количество участников  " + Member.countMember + ":");
+        for (int i = 0; i < membersTeam.length; i++) {
+            System.out.println((i + 1) + " " + membersTeam[i].infoMember() + Member.passStage);
+        }
+    }
+
+
 }
 
 
